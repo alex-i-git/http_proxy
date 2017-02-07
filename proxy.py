@@ -52,9 +52,7 @@ def home(url):
     for i in range(len(post_content_list)):
             if len(post_content_list[i]) == 6:
                     if is_punct(post_content_list[i]) == 0:
-                        x = list(post_content_list[i])
-                        x.append(u'\u2122')
-                        x = ''.join(x)
+                        x = post_content_list[i] + u'\u2122'
                         post_content_list[i] = x
 
     content_out = ' '.join(post_content_list)
